@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="8.894"><testcase classname="rostest.runner.RosTest" name="testtest_aruco_pose_largemap" time="8.8929" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/largemap.test] run_id[7b555d32-d7d2-11e9-841b-0242ac110002] starting
+&amp;#x001B;[1mstarted roslaunch server http://127.0.0.1:42464/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /aruco_map/
+
+PARAMETERS
+ * /aruco_map/map: /home/pi/catkin_w...
+ * /aruco_map/type: map
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+
+NODES
+  /
+    aruco_map (nodelet/nodelet)
+    nodelet_manager (nodelet/nodelet)
+
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/largemap.test] run_id[7b555d32-d7d2-11e9-841b-0242ac110002] done
+[ROSTEST]Running test [test_aruco_pose_largemap]
+&amp;#x001B;[1mROS_MASTER_URI=http://127.0.0.1:46830/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 7b555d32-d7d2-11e9-841b-0242ac110002&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[nodelet_manager-1]: started with pid [1221]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[aruco_map-2]: started with pid [1224]&amp;#x001B;[0m
+[ROSTEST]running test test_aruco_pose_largemap
+&amp;#x001B;[1mprocess[test_aruco_pose_largemap-3]: started with pid [1244]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_aruco_pose_largemap-3] process has finished cleanly
+log file: /root/.ros/log/7b555d32-d7d2-11e9-841b-0242ac110002/test_aruco_pose_largemap-3*.log&amp;#x001B;[0m
+[ROSTEST]test [test_aruco_pose_largemap] finished
+[ROSTEST]test [test_aruco_pose_largemap] results are in [/home/pi/catkin_ws/build/test_results/aruco_pose/rosunit-test_aruco_pose_largemap.xml]
+[ROSTEST]test [test_aruco_pose_largemap] results summary: 0 errors, 0 failures, 2 tests
+[ROSTEST][ROSTEST] test [test_aruco_pose_largemap] done
+[ROSTEST]tearDown[/home/pi/catkin_ws/src/clever/aruco_pose/test/largemap.test]
+shutting down processing monitor...
+[aruco_map-2] killing on exit
+[nodelet_manager-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/pi/catkin_ws/src/clever/aruco_pose/test/largemap.test complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

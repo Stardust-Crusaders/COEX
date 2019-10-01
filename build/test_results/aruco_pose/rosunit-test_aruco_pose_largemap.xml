@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="2" time="0.881"><testcase classname="__main__.TestArucoPose" name="test_map_image" time="0.8025" /><testcase classname="__main__.TestArucoPose" name="test_map_visualization" time="0.0770" /><system-out>&lt;![CDATA[
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

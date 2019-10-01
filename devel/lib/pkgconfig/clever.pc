@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/devel
+
+Name: clever
+Description: Description of clever
+Version: 0.0.1
+Cflags: -I/home/pi/catkin_ws/devel/include
+Libs: -L/home/pi/catkin_ws/devel/lib -lclever
+Requires: 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="29.086"><testcase classname="rostest.runner.RosTest" name="testaruco_pose_test" time="29.0846" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/basic.test] run_id[93dc4e74-d7d2-11e9-8058-0242ac110002] starting
+&amp;#x001B;[1mstarted roslaunch server http://127.0.0.1:45924/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /aruco_detect/
+ * /aruco_map/
+
+PARAMETERS
+ * /aruco_detect/estimate_poses: True
+ * /aruco_detect/length: 0.33
+ * /aruco_detect/length_override/3: 0.1
+ * /aruco_detect/send_tf: True
+ * /aruco_map/map: /home/pi/catkin_w...
+ * /aruco_map/markers/child_frame_id_prefix: aruco_in_map_
+ * /aruco_map/markers/frame_id: aruco_map
+ * /aruco_map/type: map
+ * /main_camera/camera_info_url: file:///home/pi/c...
+ * /main_camera/frame_id: main_camera_optical
+ * /main_camera/publish_rate: 10
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+ * /test_module: /home/pi/catkin_w...
+
+NODES
+  /
+    aruco_detect (nodelet/nodelet)
+    aruco_map (nodelet/nodelet)
+    main_camera (image_publisher/image_publisher)
+    nodelet_manager (nodelet/nodelet)
+
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/basic.test] run_id[93dc4e74-d7d2-11e9-8058-0242ac110002] done
+[ROSTEST]Running test [aruco_pose_test]
+&amp;#x001B;[1mROS_MASTER_URI=http://127.0.0.1:46443/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 93dc4e74-d7d2-11e9-8058-0242ac110002&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[main_camera-1]: started with pid [1775]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[nodelet_manager-2]: started with pid [1778]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[aruco_detect-3]: started with pid [1785]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[aruco_map-4]: started with pid [1795]&amp;#x001B;[0m
+[ROSTEST]running test aruco_pose_test
+&amp;#x001B;[1mprocess[aruco_pose_test-5]: started with pid [1839]&amp;#x001B;[0m
+&amp;#x001B;[1m[aruco_pose_test-5] process has finished cleanly
+log file: /root/.ros/log/93dc4e74-d7d2-11e9-8058-0242ac110002/aruco_pose_test-5*.log&amp;#x001B;[0m
+[ROSTEST]test [aruco_pose_test] finished
+[ROSTEST]test [aruco_pose_test] results are in [/home/pi/catkin_ws/build/test_results/aruco_pose/rosunit-aruco_pose_test.xml]
+[ROSTEST]test [aruco_pose_test] results summary: 0 errors, 0 failures, 10 tests
+[ROSTEST][ROSTEST] test [aruco_pose_test] done
+[ROSTEST]tearDown[/home/pi/catkin_ws/src/clever/aruco_pose/test/basic.test]
+shutting down processing monitor...
+[aruco_map-4] killing on exit
+[aruco_detect-3] killing on exit
+[nodelet_manager-2] killing on exit
+[main_camera-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/pi/catkin_ws/src/clever/aruco_pose/test/basic.test complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

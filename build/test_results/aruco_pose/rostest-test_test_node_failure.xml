@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="14.729"><testcase classname="rostest.runner.RosTest" name="testtest_node_failure" time="14.7276" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/test_node_failure.test] run_id[6cad75e4-d7d2-11e9-8357-0242ac110002] starting
+&amp;#x001B;[1mstarted roslaunch server http://127.0.0.1:36821/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /aruco_map/
+
+PARAMETERS
+ * /aruco_map/map: /home/pi/catkin_w...
+ * /aruco_map/type: map
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+ * /test_module: /home/pi/catkin_w...
+
+NODES
+  /
+    aruco_map (nodelet/nodelet)
+    nodelet_manager (nodelet/nodelet)
+
+[ROSTEST]setup[/home/pi/catkin_ws/src/clever/aruco_pose/test/test_node_failure.test] run_id[6cad75e4-d7d2-11e9-8357-0242ac110002] done
+[ROSTEST]Running test [test_node_failure]
+&amp;#x001B;[1mROS_MASTER_URI=http://127.0.0.1:36743/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 6cad75e4-d7d2-11e9-8357-0242ac110002&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[nodelet_manager-1]: started with pid [1041]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[aruco_map-2]: started with pid [1044]&amp;#x001B;[0m
+[ROSTEST]running test test_node_failure
+&amp;#x001B;[1mprocess[test_node_failure-3]: started with pid [1064]&amp;#x001B;[0m
+&amp;#x001B;[1m[nodelet_manager-1] process has finished cleanly
+log file: /root/.ros/log/6cad75e4-d7d2-11e9-8357-0242ac110002/nodelet_manager-1*.log&amp;#x001B;[0m
+&amp;#x001B;[1m[test_node_failure-3] process has finished cleanly
+log file: /root/.ros/log/6cad75e4-d7d2-11e9-8357-0242ac110002/test_node_failure-3*.log&amp;#x001B;[0m
+[ROSTEST]test [test_node_failure] finished
+[ROSTEST]test [test_node_failure] results are in [/home/pi/catkin_ws/build/test_results/aruco_pose/rosunit-test_node_failure.xml]
+[ROSTEST]test [test_node_failure] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_node_failure] done
+[ROSTEST]tearDown[/home/pi/catkin_ws/src/clever/aruco_pose/test/test_node_failure.test]
+shutting down processing monitor...
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/pi/catkin_ws/src/clever/aruco_pose/test/test_node_failure.test complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+&amp;#x001B;[31m[aruco_map-2] process has died [pid 1044, exit code 255, cmd /opt/ros/kinetic/lib/nodelet/nodelet load aruco_pose/aruco_map nodelet_manager image_raw:=main_camera/image_raw camera_info:=main_camera/camera_info markers:=aruco_detect/markers __name:=aruco_map __log:=/root/.ros/log/6cad75e4-d7d2-11e9-8357-0242ac110002/aruco_map-2.log].
+log file: /root/.ros/log/6cad75e4-d7d2-11e9-8357-0242ac110002/aruco_map-2*.log&amp;#x001B;[0m
+
+]]&gt;</system-err></testsuite>

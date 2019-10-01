@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="1" time="3.598"><testcase classname="test_parser_empty_map" file="test_parser_empty_map.py" line="10" name="test_empty_map" time="1.44896888733"></testcase></testsuite>
