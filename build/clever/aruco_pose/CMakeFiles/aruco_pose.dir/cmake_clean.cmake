@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/libaruco_pose.pdb"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/libaruco_pose.so"
   "CMakeFiles/aruco_pose.dir/src/aruco_detect.cpp.o"
   "CMakeFiles/aruco_pose.dir/src/aruco_map.cpp.o"
   "CMakeFiles/aruco_pose.dir/src/draw.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/libaruco_pose.pdb"
-  "/home/pi/catkin_ws/devel/lib/libaruco_pose.so"
 )
 
 # Per-language clean rules from dependency scanning.

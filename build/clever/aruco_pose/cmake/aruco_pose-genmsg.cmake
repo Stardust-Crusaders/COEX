@@ -2,7 +2,7 @@
 
 message(STATUS "aruco_pose: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iaruco_pose:/home/pi/catkin_ws/src/clever/aruco_pose/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iaruco_pose:/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(aruco_pose_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_custom_target(_aruco_pose_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" "geometry_msgs/Quaternion:aruco_pose/Point2D:geometry_msgs/Pose:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" "geometry_msgs/Quaternion:aruco_pose/Point2D:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_custom_target(_aruco_pose_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_custom_target(_aruco_pose_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" "std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point:aruco_pose/Point2D:aruco_pose/Marker:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "aruco_pose" "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" "aruco_pose/Marker:aruco_pose/Point2D:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose"
 )
 
 #
@@ -39,21 +39,21 @@ add_custom_target(_aruco_pose_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_cpp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_cpp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/aruco_pose
 )
 
@@ -71,11 +71,11 @@ add_custom_target(aruco_pose_generate_messages_cpp
 add_dependencies(aruco_pose_generate_messages aruco_pose_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_cpp _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_cpp _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_cpp _aruco_pose_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,21 +88,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS aruco_pose_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_eus(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_eus(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/aruco_pose
 )
 
@@ -120,11 +120,11 @@ add_custom_target(aruco_pose_generate_messages_eus
 add_dependencies(aruco_pose_generate_messages aruco_pose_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_eus _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_eus _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_eus _aruco_pose_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,21 +137,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS aruco_pose_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_lisp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_lisp(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/aruco_pose
 )
 
@@ -169,11 +169,11 @@ add_custom_target(aruco_pose_generate_messages_lisp
 add_dependencies(aruco_pose_generate_messages aruco_pose_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_lisp _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_lisp _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_lisp _aruco_pose_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,21 +186,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS aruco_pose_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_nodejs(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_nodejs(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/aruco_pose
 )
 
@@ -218,11 +218,11 @@ add_custom_target(aruco_pose_generate_messages_nodejs
 add_dependencies(aruco_pose_generate_messages aruco_pose_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_nodejs _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_nodejs _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_nodejs _aruco_pose_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,21 +235,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS aruco_pose_generate_messages_nodejs
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_py(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/aruco_pose
 )
 _generate_msg_py(aruco_pose
-  "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg;/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/aruco_pose
 )
 
@@ -267,11 +267,11 @@ add_custom_target(aruco_pose_generate_messages_py
 add_dependencies(aruco_pose_generate_messages aruco_pose_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Marker.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_py _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/Point2D.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_py _aruco_pose_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/msg/MarkerArray.msg" NAME_WE)
 add_dependencies(aruco_pose_generate_messages_py _aruco_pose_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

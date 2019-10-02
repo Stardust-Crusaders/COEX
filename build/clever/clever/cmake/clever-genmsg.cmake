@@ -17,44 +17,44 @@ add_custom_target(clever_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" ""
 )
 
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_custom_target(_clever_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "clever" "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" ""
 )
 
 #
@@ -66,49 +66,49 @@ add_custom_target(_clever_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
 )
 _generate_srv_cpp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/clever
@@ -126,21 +126,21 @@ add_custom_target(clever_generate_messages_cpp
 add_dependencies(clever_generate_messages clever_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_dependencies(clever_generate_messages_cpp _clever_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -155,49 +155,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS clever_generate_messages_cpp)
 
 ### Generating Services
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
 )
 _generate_srv_eus(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/clever
@@ -215,21 +215,21 @@ add_custom_target(clever_generate_messages_eus
 add_dependencies(clever_generate_messages clever_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_dependencies(clever_generate_messages_eus _clever_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -244,49 +244,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS clever_generate_messages_eus)
 
 ### Generating Services
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
 )
 _generate_srv_lisp(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/clever
@@ -304,21 +304,21 @@ add_custom_target(clever_generate_messages_lisp
 add_dependencies(clever_generate_messages clever_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_dependencies(clever_generate_messages_lisp _clever_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -333,49 +333,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS clever_generate_messages_lisp)
 
 ### Generating Services
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
 )
 _generate_srv_nodejs(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/clever
@@ -393,21 +393,21 @@ add_custom_target(clever_generate_messages_nodejs
 add_dependencies(clever_generate_messages clever_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_dependencies(clever_generate_messages_nodejs _clever_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -422,49 +422,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS clever_generate_messages_nodejs)
 
 ### Generating Services
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
 )
 _generate_srv_py(clever
-  "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/clever
@@ -482,21 +482,21 @@ add_custom_target(clever_generate_messages_py
 add_dependencies(clever_generate_messages clever_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetAttitude.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/SetLEDEffect.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetRates.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/Navigate.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/SetVelocity.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/NavigateGlobal.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
+get_filename_component(_filename "/home/kira/projects/copter_hack/catkin_ws/src/clever/clever/srv/GetTelemetry.srv" NAME_WE)
 add_dependencies(clever_generate_messages_py _clever_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

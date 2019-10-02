@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/rc"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/rc.pdb"
   "CMakeFiles/rc.dir/src/rc.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/clever/rc.pdb"
-  "/home/pi/catkin_ws/devel/lib/clever/rc"
 )
 
 # Per-language clean rules from dependency scanning.

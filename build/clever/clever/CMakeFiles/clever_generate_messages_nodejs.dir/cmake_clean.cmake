@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/GetTelemetry.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/Navigate.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/NavigateGlobal.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetAttitude.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetLEDEffect.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetPosition.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetRates.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetVelocity.js"
   "CMakeFiles/clever_generate_messages_nodejs"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetAttitude.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetLEDEffect.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/NavigateGlobal.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetPosition.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/Navigate.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetRates.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/SetVelocity.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/clever/srv/GetTelemetry.js"
 )
 
 # Per-language clean rules from dependency scanning.

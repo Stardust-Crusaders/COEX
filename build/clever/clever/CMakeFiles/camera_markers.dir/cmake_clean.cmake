@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/camera_markers"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/camera_markers.pdb"
   "CMakeFiles/camera_markers.dir/src/camera_markers.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/clever/camera_markers.pdb"
-  "/home/pi/catkin_ws/devel/lib/clever/camera_markers"
 )
 
 # Per-language clean rules from dependency scanning.

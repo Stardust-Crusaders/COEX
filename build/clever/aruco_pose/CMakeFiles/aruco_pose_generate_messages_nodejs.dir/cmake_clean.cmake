@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/Marker.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/MarkerArray.js"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/Point2D.js"
   "CMakeFiles/aruco_pose_generate_messages_nodejs"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/Marker.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/Point2D.js"
-  "/home/pi/catkin_ws/devel/share/gennodejs/ros/aruco_pose/msg/MarkerArray.js"
 )
 
 # Per-language clean rules from dependency scanning.

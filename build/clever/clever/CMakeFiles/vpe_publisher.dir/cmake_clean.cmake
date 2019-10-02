@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/vpe_publisher"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/vpe_publisher.pdb"
   "CMakeFiles/vpe_publisher.dir/src/vpe_publisher.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/clever/vpe_publisher.pdb"
-  "/home/pi/catkin_ws/devel/lib/clever/vpe_publisher"
 )
 
 # Per-language clean rules from dependency scanning.

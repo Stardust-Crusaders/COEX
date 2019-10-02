@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/Marker.lisp"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/MarkerArray.lisp"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/Point2D.lisp"
   "CMakeFiles/aruco_pose_generate_messages_lisp"
-  "/home/pi/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/Marker.lisp"
-  "/home/pi/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/Point2D.lisp"
-  "/home/pi/catkin_ws/devel/share/common-lisp/ros/aruco_pose/msg/MarkerArray.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

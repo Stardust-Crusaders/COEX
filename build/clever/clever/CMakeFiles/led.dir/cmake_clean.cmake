@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/led"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/clever/led.pdb"
   "CMakeFiles/led.dir/src/led.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/clever/led.pdb"
-  "/home/pi/catkin_ws/devel/lib/clever/led"
 )
 
 # Per-language clean rules from dependency scanning.

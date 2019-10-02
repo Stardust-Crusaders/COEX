@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/catkin_ws/src/clever/aruco_pose/src/aruco_detect.cpp" "/home/pi/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/aruco_detect.cpp.o"
-  "/home/pi/catkin_ws/src/clever/aruco_pose/src/aruco_map.cpp" "/home/pi/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/aruco_map.cpp.o"
-  "/home/pi/catkin_ws/src/clever/aruco_pose/src/draw.cpp" "/home/pi/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/draw.cpp.o"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/src/aruco_detect.cpp" "/home/kira/projects/copter_hack/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/aruco_detect.cpp.o"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/src/aruco_map.cpp" "/home/kira/projects/copter_hack/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/aruco_map.cpp.o"
+  "/home/kira/projects/copter_hack/catkin_ws/src/clever/aruco_pose/src/draw.cpp" "/home/kira/projects/copter_hack/catkin_ws/build/clever/aruco_pose/CMakeFiles/aruco_pose.dir/src/draw.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,16 +15,17 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"aruco_pose\""
+  "aruco_pose_EXPORTS"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/pi/catkin_ws/devel/include"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/eigen3"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
-  "/usr/include/eigen3"
   )
 
 # Targets to which this target links.

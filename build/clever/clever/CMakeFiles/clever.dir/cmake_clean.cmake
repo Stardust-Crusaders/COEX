@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/libclever.pdb"
+  "/home/kira/projects/copter_hack/catkin_ws/devel/lib/libclever.so"
   "CMakeFiles/clever.dir/src/optical_flow.cpp.o"
-  "/home/pi/catkin_ws/devel/lib/libclever.pdb"
-  "/home/pi/catkin_ws/devel/lib/libclever.so"
 )
 
 # Per-language clean rules from dependency scanning.
