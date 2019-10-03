@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 # coding=utf-8
 
 # Copyright (C) 2018 Copter Express Technologies
