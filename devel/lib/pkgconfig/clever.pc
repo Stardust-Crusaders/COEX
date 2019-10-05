@@ -1,8 +1,0 @@
-prefix=/home/kira/projects/copter_hack/catkin_ws/devel
-
-Name: clever
-Description: Description of clever
-Version: 0.0.1
-Cflags: -I/home/kira/projects/copter_hack/catkin_ws/devel/include
-Libs: -L/home/kira/projects/copter_hack/catkin_ws/devel/lib -lclever
-Requires: 
