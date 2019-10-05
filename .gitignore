@@ -16,3 +16,5 @@ make-build-debug
 #ROS
 install
 devel
+src/clever/ws281x
+src/clever/led_msgs
