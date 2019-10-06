@@ -73,6 +73,10 @@
     <node name="rc" pkg="clever" type="rc" output="screen" if="$(arg rc)"/>
 
     <!-- tcp commands -->
-    <node name="tcp_server" pkg="clever" type="tcp_server" if="$(arg tcp)"/>
+    <node name="tcp_server" pkg="clever" type="tcp_server" if="$(arg tcp)">
+        <param name="port" value="7331"/>
+    </node>
+
+
 
 </launch>
