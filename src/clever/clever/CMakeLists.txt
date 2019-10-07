@@ -169,6 +169,8 @@ add_executable(led src/led.cpp)
 
 add_executable(tcp_server src/tcp_server.cpp)
 
+add_executable(udp_telemetry src/udp_telemetry.cpp)
+
 target_link_libraries(simple_offboard
   ${catkin_LIBRARIES}
   ${GeographicLib_LIBRARIES}
@@ -183,6 +185,8 @@ target_link_libraries(vpe_publisher ${catkin_LIBRARIES})
 target_link_libraries(led ${catkin_LIBRARIES})
 
 target_link_libraries(tcp_server ${catkin_LIBRARIES})
+
+target_link_libraries(udp_telemetry ${catkin_LIBRARIES})
 
 add_dependencies(simple_offboard clever_generate_messages_cpp)
 

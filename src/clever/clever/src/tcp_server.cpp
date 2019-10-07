@@ -7,6 +7,90 @@
 
 #include "../include/tcp_server.h"
 
+
+int main(int argc, char **argv) {
+    ros::init(argc, argv, "tcp_server");
+    ros::NodeHandle n;
+
+    //  service connect
+    srv_clever srv;
+    srv.navigate  = n.serviceClient<clever::Navigate>("navigate");
+    srv.attitude  = n.serviceClient<clever::SetAttitude>("set_attitude");
+    srv.position  = n.serviceClient<clever::SetPosition>("set_position");
+    srv.rates     = n.serviceClient<clever::SetRates>("set_rates");
+    srv.velocity  = n.serviceClient<clever::SetVelocity>("set_velocity");
+    srv.telemetry = n.serviceClient<clever::GetTelemetry>("get_telemetry");
+
+    //  tcp connect
+    std::string port;
+    n.param<std::string>("port", port, "7331");
+    tcp_server tcp_cmd(std::atoi(port.c_str()));
+
+    //  service messages
+    msg_clever msg;
+    msg.navigate.request.frame_id = "body";
+    //  TODO(UsatiyNyan): is it really body or should we use fcu_horiz
+    msg.navigate.request.auto_arm = true;
+//    msg.rates.request.auto_arm = true;
+
+    //  main loop
+    std::string cmd_recv;
+    bool stop_flag = false;
+    while(ros::ok()) {
+        tcp_cmd.accept_wait();
+        while (ros::ok()) {
+            if ((tcp_cmd >> cmd_recv) <= 0) {
+                break;
+            }
+            ROS_INFO(cmd_recv.data());
+            switch (std::stoi(cmd_recv)) {
+                case cmd::stop:
+                    stop_flag = true;
+                    break;
+                case cmd::step_shift:
+                    msg.navigate.request.z = 1;
+                    step(msg, srv);
+                    break;
+                case cmd::step_ctrl:
+                    msg.navigate.request.z = -1;
+                    step(msg, srv);
+                    break;
+                case cmd::step_w:
+                    msg.navigate.request.x = 1;
+                    step(msg, srv);
+                    break;
+                case cmd::step_a:
+                    msg.navigate.request.y = 1;
+                    step(msg, srv);
+                    break;
+                case cmd::step_s:
+                    msg.navigate.request.x = -1;
+                    step(msg, srv);
+                    break;
+                case cmd::step_d:
+                    msg.navigate.request.y = -1;
+                    step(msg, srv);
+                    break;
+                case cmd::flip:
+                    flip(msg, srv);
+                    break;
+                default:
+                    ROS_INFO("incorrect input");
+                    continue;
+            }
+            if (stop_flag) {
+                break;
+            }
+        }
+
+        if (stop_flag) {
+            break;
+        }
+    }
+    return 0;
+}
+
+
 tcp_server::tcp_server(unsigned port)
 : addr(), sock(), listener(socket(AF_INET, SOCK_STREAM, 0)), size_(128) {
     assert(listener != -1);
@@ -104,87 +188,4 @@ void rates(msg_clever &msg, srv_clever &srv) {
     msg.rates.request.yaw_rate = 0;
     msg.rates.request.pitch_rate = 0;
     msg.rates.request.roll_rate = 0;
-}
-
-
-int main(int argc, char **argv) {
-    ros::init(argc, argv, "tcp_server");
-    ros::NodeHandle n;
-
-    //  service connect
-    srv_clever srv;
-    srv.navigate  = n.serviceClient<clever::Navigate>("navigate");
-    srv.attitude  = n.serviceClient<clever::SetAttitude>("set_attitude");
-    srv.position  = n.serviceClient<clever::SetPosition>("set_position");
-    srv.rates     = n.serviceClient<clever::SetRates>("set_rates");
-    srv.velocity  = n.serviceClient<clever::SetVelocity>("set_velocity");
-    srv.telemetry = n.serviceClient<clever::GetTelemetry>("get_telemetry");
-
-    //  tcp connect
-    std::string port;
-    n.param<std::string>("port", port, "7331");
-    tcp_server tcp_cmd(std::atoi(port.data()));
-
-    //  service messages
-    msg_clever msg;
-    msg.navigate.request.frame_id = "body";
-    //  TODO(UsatiyNyan): is it really body or should we use fcu_horiz
-    msg.navigate.request.auto_arm = true;
-//    msg.rates.request.auto_arm = true;
-
-    //  main loop
-    std::string cmd_recv;
-    bool stop_flag = false;
-    while(ros::ok()) {
-        tcp_cmd.accept_wait();
-        while (ros::ok()) {
-            if ((tcp_cmd >> cmd_recv) <= 0) {
-                break;
-            }
-            ROS_INFO(cmd_recv.data());
-            switch (std::stoi(cmd_recv)) {
-                case cmd::stop:
-                    stop_flag = true;
-                    break;
-                case cmd::step_shift:
-                    msg.navigate.request.z = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_ctrl:
-                    msg.navigate.request.z = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_w:
-                    msg.navigate.request.x = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_a:
-                    msg.navigate.request.y = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_s:
-                    msg.navigate.request.x = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_d:
-                    msg.navigate.request.y = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::flip:
-                    flip(msg, srv);
-                    break;
-                default:
-                    ROS_INFO("incorrect input");
-                    continue;
-            }
-            if (stop_flag) {
-                break;
-            }
-        }
-
-        if (stop_flag) {
-            break;
-        }
-    }
-    return 0;
 }

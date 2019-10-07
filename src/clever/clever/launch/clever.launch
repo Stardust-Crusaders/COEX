@@ -11,6 +11,8 @@
     <arg name="led" default="true"/>
     <arg name="rc" default="false"/>
     <arg name="tcp" default="true"/>
+    <arg name="udp" default="true"/>
+
 
     <!-- log formatting -->
     <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}]: ${logger}: ${message}"/>
@@ -74,7 +76,13 @@
 
     <!-- tcp commands -->
     <node name="tcp_server" pkg="clever" type="tcp_server" if="$(arg tcp)">
-        <param name="port" value="7331"/>
+        <param name="port" type="int" value="7331"/>
+    </node>
+
+    <!-- udp telemetry -->
+    <node name="udp_telemetry" pkg="clever" type="udp_telemetry" if="$(arg udp)">
+        <param name="host" type="string" value="192.168.0.200"/>
+        <param name="port" type="string" value="7332"/>
     </node>
 
 
