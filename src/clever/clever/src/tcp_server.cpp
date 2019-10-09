@@ -132,7 +132,7 @@ void flip (msg_clever &msg,srv_clever &srv) {
         msg.navigate.request.z = 0.95 - msg.telemetry.response.z;
         step(msg, srv);
         while (msg.telemetry.response.z < 0.95) {
-            ros::Duration(0.5).sleep();
+            usleep(300000);
             srv.telemetry.call(msg.telemetry);
         }
     }
@@ -140,7 +140,7 @@ void flip (msg_clever &msg,srv_clever &srv) {
     // bump up
     msg.rates.request.thrust = 3;
     rates(msg, srv);
-    ros::Duration(1).sleep();
+    usleep(1000000);
 
     // spin
     msg.rates.request.roll_rate = 7;

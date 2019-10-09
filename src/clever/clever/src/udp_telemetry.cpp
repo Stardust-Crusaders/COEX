@@ -14,7 +14,7 @@ int main(int argc, char ** argv) {
 
     //  udp connect
     std::string host, port;
-    n.param<std::string>("host", host, "0.0.0.0"); //  "192.168.0.200"
+    n.param<std::string>("host", host, "192.168.0.202"); //  "192.168.0.200"
     n.param<std::string>("port", port, "7332");
     udp_sender udp_tele(host, std::atoi(port.c_str()));
     //  TODO(UsatiyNyan): static ip declared but might be some issues
@@ -37,12 +37,12 @@ int main(int argc, char ** argv) {
         udp_tele_msg.pitch = (telemetry_msg.response.pitch);
         udp_tele_msg.roll  = (telemetry_msg.response.roll );
 
-//        ROS_INFO(std::to_string(udp_tele_msg.x     ).c_str());
-//        ROS_INFO(std::to_string(udp_tele_msg.y     ).c_str());
-//        ROS_INFO(std::to_string(udp_tele_msg.z     ).c_str());
-//        ROS_INFO(std::to_string(udp_tele_msg.yaw   ).c_str());
-//        ROS_INFO(std::to_string(udp_tele_msg.pitch ).c_str());
-//        ROS_INFO(std::to_string(udp_tele_msg.roll  ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.x     ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.y     ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.z     ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.yaw   ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.pitch ).c_str());
+        ROS_INFO(std::to_string(udp_tele_msg.roll  ).c_str());
 
         //  send
         udp_tele << udp_tele_msg;
