@@ -1,18 +1,18 @@
 <launch>
     <!-- Clever configuration for testing in sitl -->
     <arg name="ip" default="127.0.0.1"/>
-    <arg name="rosbridge" default="false"/>
+    <arg name="rosbridge" default="true"/>
 
     <include file="$(find clever)/launch/clever.launch">
         <arg name="fcu_conn" value="udp"/>
         <arg name="fcu_ip" value="$(arg ip)"/>
-        <arg name="gcs_bridge" value="false"/>
+        <arg name="gcs_bridge" value="true"/>
         <arg name="optical_flow" value="false"/>
-        <arg name="web_video_server" default="false"/>
-        <arg name="main_camera" default="false"/>
+        <arg name="web_video_server" default="true"/>
+        <arg name="main_camera" default="true"/>
         <arg name="rosbridge" value="$(arg rosbridge)"/>
-        <arg name="aruco" default="false"/>
-        <arg name="rangefinder_vl53l1x" default="false"/>
+        <arg name="aruco" default="true"/>
+        <arg name="rangefinder_vl53l1x" default="true"/>
         <arg name="rc" default="false"/>
     </include>
 </launch>

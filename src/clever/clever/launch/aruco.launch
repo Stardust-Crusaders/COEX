@@ -1,6 +1,6 @@
 <launch>
     <arg name="aruco_detect" default="true"/>
-    <arg name="aruco_map" default="false"/>
+    <arg name="aruco_map" default="true"/>
     <arg name="aruco_vpe" default="false"/>
 
     <!-- For additional help go to https://clever.coex.tech/aruco -->
@@ -21,7 +21,7 @@
         <remap from="image_raw" to="main_camera/image_raw"/>
         <remap from="camera_info" to="main_camera/camera_info"/>
         <remap from="markers" to="aruco_detect/markers"/>
-        <param name="map" value="$(find aruco_pose)/map/map.txt"/>
+        <param name="map" value="$(find aruco_pose)/map/cmit.txt"/>
         <param name="known_tilt" value="map"/>
         <param name="image_axis" value="true"/>
         <param name="frame_id" value="aruco_map_detected" if="$(arg aruco_vpe)"/>

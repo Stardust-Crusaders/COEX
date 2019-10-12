@@ -6,10 +6,12 @@
     <arg name="rosbridge" default="true"/>
     <arg name="main_camera" default="true"/>
     <arg name="optical_flow" default="false"/>
-    <arg name="aruco" default="false"/>
-    <arg name="rangefinder_vl53l1x" default="false"/>
+    <arg name="aruco" default="true"/>
+    <arg name="rangefinder_vl53l1x" default="true"/>
     <arg name="led" default="false"/>
-    <arg name="rc" default="true"/>
+    <arg name="rc" default="false"/>
+    <arg name="udp" default="true"/>
+    <arg name="tcp" default="true"/>
 
     <!-- log formatting -->
     <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}]: ${logger}: ${message}"/>
@@ -70,4 +72,15 @@
 
     <!-- rc backend -->
     <node name="rc" pkg="clever" type="rc" output="screen" if="$(arg rc)"/>
+
+    <!-- tcp_server -->
+    <node name="tcp_server" pkg="clever" type="tcp_server" if="$(arg tcp)">
+	<param name="port" type="int" value="7331"/>
+    </node>
+
+    <!-- udp_telemetry -->
+    <node name="udp_telemetry" pkg="clever" type="udp_telemetry" if="$(arg udp)">
+	<param name="host" type="string" value="192.168.0.200"/>
+	<param name="port" type="string" value="7332"/>
+    </node>
 </launch>
