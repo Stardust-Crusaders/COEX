@@ -12,7 +12,7 @@ typedef struct udp_msg {
     float yaw;
     float pitch;
     float roll;
-    //TODO(UsatiyNyan): should we use velocities?
+    float battery;
 } udp_msg;
 
 

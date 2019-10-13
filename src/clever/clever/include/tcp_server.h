@@ -4,6 +4,7 @@
 
 #ifndef CATKIN_WS_TCP_SERVER_H
 #define CATKIN_WS_TCP_SERVER_H
+#define STEP_VAL 0.3
 
 #include "ros/ros.h"
 #include <sys/types.h>
@@ -58,6 +59,7 @@ typedef struct srv_clever {
 void flip (msg_clever &msg, srv_clever &srv);
 void step (msg_clever &msg, srv_clever &srv);
 void rates(msg_clever &msg, srv_clever &srv);
+void velocity(msg_clever &msg, srv_clever &srv);
 
 #endif //CATKIN_WS_TCP_SERVER_H
 

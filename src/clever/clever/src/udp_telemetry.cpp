@@ -22,7 +22,7 @@ int main(int argc, char ** argv) {
     //  service messages
     udp_msg udp_tele_msg = {};
     clever::GetTelemetry telemetry_msg;
-    telemetry_msg.request.frame_id = "map";
+    telemetry_msg.request.frame_id = "aruco_map";
     // TODO(UsatiyNyan): is it really only map? should check it on hack
 
     //  main loop
@@ -36,7 +36,7 @@ int main(int argc, char ** argv) {
         udp_tele_msg.yaw   = (telemetry_msg.response.yaw  );
         udp_tele_msg.pitch = (telemetry_msg.response.pitch);
         udp_tele_msg.roll  = (telemetry_msg.response.roll );
-
+	udp_tele_msg.battery = (telemetry_msg.response.voltage);
         ROS_INFO(std::to_string(udp_tele_msg.x     ).c_str());
         ROS_INFO(std::to_string(udp_tele_msg.y     ).c_str());
         ROS_INFO(std::to_string(udp_tele_msg.z     ).c_str());

@@ -28,63 +28,55 @@ int main(int argc, char **argv) {
 
     //  service messages
     msg_clever msg;
-    msg.navigate.request.frame_id = "body";
-    //  TODO(UsatiyNyan): is it really body or should we use fcu_horiz
     msg.navigate.request.auto_arm = true;
-//    msg.rates.request.auto_arm = true;
-
+    msg.telemetry.request.frame_id="aruco_map";
+    int number = 0;
+    float tolerance = 0.2;
     //  main loop
     std::string cmd_recv;
-    bool stop_flag = false;
     while(ros::ok()) {
         tcp_cmd.accept_wait();
         while (ros::ok()) {
             if ((tcp_cmd >> cmd_recv) <= 0) {
                 break;
             }
-            ROS_INFO(cmd_recv.data());
-            switch (std::stoi(cmd_recv)) {
-                case cmd::stop:
-                    stop_flag = true;
-                    break;
-                case cmd::step_shift:
-                    msg.navigate.request.z = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_ctrl:
-                    msg.navigate.request.z = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_w:
-                    msg.navigate.request.x = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_a:
-                    msg.navigate.request.y = 1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_s:
-                    msg.navigate.request.x = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::step_d:
-                    msg.navigate.request.y = -1;
-                    step(msg, srv);
-                    break;
-                case cmd::flip:
-                    flip(msg, srv);
-                    break;
-                default:
-                    ROS_INFO("incorrect input");
-                    continue;
+            msg.navigate.request.frame_id = "body";
+            msg.navigate.request.z = 1;
+            step(msg, srv);
+	    usleep(2000000);
+//	    ROS_INFO(cmd_recv.data());
+            number = cmd_recv[0];
+            for (int i = 0; i < number ; ++i) {
+                msg.navigate.request.frame_id = "aruco_map";
+                char navx = cmd_recv[i * 3 + 1];
+                char navy = cmd_recv[i * 3 + 2];
+                char navz = cmd_recv[i * 3 + 3];
+//		ROS_INFO(std::to_string(navx).data());
+//		ROS_INFO(std::to_string(navy).data());
+//		ROS_INFO(std::to_string(navz).data());
+                msg.navigate.request.x = navx;
+                msg.navigate.request.y = navy;
+                msg.navigate.request.z = navz;
+                step(msg, srv);
+                while(ros::ok()) {
+                    srv.telemetry.call(msg.telemetry);
+                    auto start = msg.telemetry.response;
+		    float bufx = (float)start.x;
+		    float bufy = (float)start.y;
+		    float bufz = (float)start.z;
+		    
+                    if ((std::abs(bufx - (float)navx) < tolerance) &&
+                        (std::abs(bufy - (float)navy) < tolerance) &&
+                        (std::abs(bufz - (float)navz) < tolerance)) {
+			//usleep(10000000);
+                        break;
+                    }
+                }
             }
-            if (stop_flag) {
-                break;
-            }
-        }
-
-        if (stop_flag) {
-            break;
+            msg.navigate.request.x = 8;
+            msg.navigate.request.y = 8;
+            msg.navigate.request.z = 0;
+            step(msg, srv);
         }
     }
     return 0;
@@ -125,7 +117,7 @@ int tcp_server::accept_wait() {
 
 
 void flip (msg_clever &msg,srv_clever &srv) {
-    msg.telemetry.request.frame_id = "map"; // TODO(UsatiyNyan): is it really only map? should check it on hack
+    msg.telemetry.request.frame_id = "aruco_map"; // TODO(UsatiyNyan): is it really only map? should check it on hack
     srv.telemetry.call(msg.telemetry);
     auto start = msg.telemetry.response;
     if (msg.telemetry.response.z < 1) {
@@ -145,7 +137,7 @@ void flip (msg_clever &msg,srv_clever &srv) {
     // spin
     msg.rates.request.roll_rate = 7;
     msg.rates.request.thrust = 0.2;
-    rates(msg, srv); //  TODO(UsatiyNyan): maximum roll rate is 3 or 7 idk
+    rates(msg, srv);
 
     while (true) {
         srv.telemetry.call(msg.telemetry);
@@ -189,3 +181,12 @@ void rates(msg_clever &msg, srv_clever &srv) {
     msg.rates.request.pitch_rate = 0;
     msg.rates.request.roll_rate = 0;
 }
+
+void velocity(msg_clever &msg, srv_clever &srv) {
+    srv.velocity.call(msg.velocity);
+    // clear msg
+    msg.velocity.request.vx = 0;
+    msg.velocity.request.vy = 0;
+    msg.velocity.request.vz = 0;
+}
+
